@@ -18,4 +18,10 @@
     color: black;
     border: none;
     border-radius: 1vw;
+
+    height: 25%;
+    width: 25%;
+
+    align-content: center;
+    justify-content: center;
 }

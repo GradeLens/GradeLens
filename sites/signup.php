@@ -9,7 +9,6 @@
 <body id="body">
     <section id="signup-container">
         <h1>Signup</h1>
-        <p>Login or Register</p>
     </section>
 </body>
 </html>
