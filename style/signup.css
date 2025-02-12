@@ -4,6 +4,9 @@
     background-color: white;
     color: black;
 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+
     backface-visibility: hidden;
 }
 
@@ -18,7 +21,7 @@
     padding-left: 1vw;
     padding-right: 1vw;
 
-    background-color: aqua;
+    background-color: #bbbbbb;
     color: black;
     border: none;
     border-radius: 1vw;
@@ -27,12 +30,16 @@
     width: 35%;
 
     display: flex;
+    flex-direction: column;
 }
 
 #top {
     background-color: none;
     display: flex;
     flex-direction: row;
+    flex-grow: 1;
+
+    width: auto;
 }
 
 #logo {
@@ -40,5 +47,30 @@
     position: inherit;
     align-self: center;
 
-    right: 0;
+    margin-left: auto;
+
+    transition: transform 0.2s ease, rotate 1s ease;
+    &:hover {
+        transform: scale(1.1) rotate(120deg);
+    }
+    &:active {
+        transform: scale(0.99) rotate(-120deg);
+    }
+    backface-visibility: hidden;
+}
+
+#signup-text {
+    align-self: center;
+    justify-self: center;
+}
+
+#top-seperator {
+    background-color: #dddddd;
+    margin-top: 1vh;
+
+    display: flex;
+    flex-grow: 1;
+
+    height: 0.25vh;
+    width: auto;
 }
