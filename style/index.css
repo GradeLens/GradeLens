@@ -4,6 +4,10 @@
 
     border: none;
     border-radius: 1vw;
-    
+
     backface-visibility: hidden;
+}
+
+#noten-input {
+    width: 100%;
 }
