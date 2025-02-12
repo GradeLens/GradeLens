@@ -1,0 +1,9 @@
+#testtext {
+    background-color: black;
+    color: white;
+
+    border: none;
+    border-radius: 1vw;
+    
+    backface-visibility: hidden;
+}
