@@ -1,7 +1,6 @@
 #body {
-    height: 100%;
-    width: 100%;
-
+    height: auto;
+    width: auto;
     background-color: white;
     color: black;
 
@@ -19,8 +18,8 @@
     border: none;
     border-radius: 1vw;
 
-    height: 25%;
-    width: 25%;
+    height: 35%;
+    width: 35%;
 
     align-content: center;
     justify-content: center;
