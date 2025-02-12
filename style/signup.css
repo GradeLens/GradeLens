@@ -1,0 +1,26 @@
+#body {
+    height: auto;
+    width: auto;
+    background-color: white;
+    color: black;
+
+    backface-visibility: hidden;
+}
+
+#signup-container {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+
+    background-color: aqua;
+    color: black;
+    border: none;
+    border-radius: 1vw;
+
+    height: 35%;
+    width: 35%;
+
+    align-content: center;
+    justify-content: center;
+}

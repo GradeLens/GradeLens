@@ -6,7 +6,9 @@
     <title>Signup</title>
     <link rel="stylesheet" href="../style/signup.css">
 </head>
-<body>
-    
+<body id="body">
+    <section id="signup-container">
+        <h1>Signup</h1>
+    </section>
 </body>
 </html>
