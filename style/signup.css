@@ -49,12 +49,12 @@
 
     margin-left: auto;
 
-    transition: transform 0.2s ease, rotate 1s ease;
+    transition: transform 0.35s ease, rotate 1s ease;
     &:hover {
         transform: scale(1.1) rotate(120deg);
     }
     &:active {
-        transform: scale(0.99) rotate(-120deg);
+        transform: scale(0.99) rotate(240deg);
     }
     backface-visibility: hidden;
 }
