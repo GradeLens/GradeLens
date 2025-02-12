@@ -1,8 +1,8 @@
 #body {
     height: auto;
     width: auto;
-    background-color: white;
-    color: black;
+    background-color: #444444;
+    color: white;
 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-decoration: none;
@@ -21,8 +21,8 @@
     padding-left: 1vw;
     padding-right: 1vw;
 
-    background-color: #bbbbbb;
-    color: black;
+    background-color: black;
+    color: white;
     border: none;
     border-radius: 1vw;
 
@@ -32,7 +32,7 @@
     display: flex;
     flex-direction: column;
 
-    box-shadow: #dddddd 5px 5px 5px;
+    box-shadow: #222222 5px 5px 5px;
 }
 
 #top {
@@ -67,7 +67,7 @@
 }
 
 #top-seperator {
-    background-color: #dddddd;
+    background-color: #444444;
     margin-top: 1vh;
 
     display: flex;
@@ -79,7 +79,7 @@
 
 #credentials-container {
     background-color: none;
-    color: black;
+    color: white;
     margin-top: 1vh;
 
     display: flex;
@@ -88,8 +88,8 @@
 }
 
 #email-input {
-    background-color: #dddddd;
-    color: black;
+    background-color: #444444;
+    color: white;
     margin-top: 0.25vh;
 
     border: none;
