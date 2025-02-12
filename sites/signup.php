@@ -9,8 +9,8 @@
 <body id="body">
     <section id="signup-container">
         <div id="top">
-            <h1>Signup</h1>
             <img src="../source/GradeLens_LOGO_transparent-black-var2.webp" alt="Logo" id="logo" width="50px" height="50px">
+            <h1>Signup</h1>
         </div>
     </section>
 </body>
