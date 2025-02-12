@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="../style/signup.css">
 </head>
 <body id="body">
-    <h1>Bitte melde dich an</h1>
+    <section id="signup-container">
+        <h1>Signup</h1>
+    </section>
 </body>
 </html>
