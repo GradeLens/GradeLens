@@ -74,3 +74,31 @@
     height: 0.25vh;
     width: auto;
 }
+
+#credentials-container {
+    background-color: none;
+    color: black;
+    margin-top: 1vh;
+
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+}
+
+#email-input {
+    background-color: #dddddd;
+    color: black;
+    margin-top: 0.25vh;
+
+    border: none;
+    border-radius: 1vw;
+
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    padding-left: 1vw;
+    padding-right: 1vw;
+
+    &:focus {
+        background-color: white;
+    }
+}
