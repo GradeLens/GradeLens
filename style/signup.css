@@ -13,6 +13,11 @@
     margin-left: auto;
     margin-right: auto;
 
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    padding-left: 1vw;
+    padding-right: 1vw;
+
     background-color: aqua;
     color: black;
     border: none;
@@ -21,6 +26,18 @@
     height: 35%;
     width: 35%;
 
-    align-content: center;
-    justify-content: center;
+    display: flex;
+}
+
+#top {
+    background-color: none;
+    display: flex;
+    flex-direction: row;
+}
+
+#logo {
+    position: inherit;
+    align-self: center;
+
+    margin-left: auto;
 }
