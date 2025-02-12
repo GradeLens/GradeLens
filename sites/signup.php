@@ -6,7 +6,7 @@
     <title>Signup</title>
     <link rel="stylesheet" href="../style/signup.css">
 </head>
-<body>
-    
+<body id="body">
+    <h1>Bitte melde dich an</h1>
 </body>
 </html>
