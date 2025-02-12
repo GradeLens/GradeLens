@@ -98,7 +98,10 @@
     padding-left: 1vw;
     padding-right: 1vw;
 
+    transition: transform 0.2s ease;
     &:focus {
         background-color: white;
+        color: black;
+        transform: scale(1.01);
     }
 }
