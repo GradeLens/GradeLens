@@ -24,7 +24,7 @@
 
             <div id="top-seperator"></div>
 
-            <button type="submit" id="submit-button">Submit</button>
+            <button type="submit" id="submit-button">Register</button>
         </form>
         <section id="bottom">
             <label id="redstar">*</label><label id="tos-text">Please be aware that GradeLens™ will store and collect the information that you put in. It will also process given data to store it quick and efficiently in our database. However we are currently not selling that data to advertisers</label>
@@ -50,13 +50,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "SELECT * FROM users WHERE email = '$email'";
     $result = $conn->query($sql);
 
-    if (($result->num_rows > 0) && ($email != '') && ($pwd != '')) {
-        header("Location: login.php");
-    } else {
-        if (($email != '') && ($pwd != '')) {
-        $sql = "INSERT INTO users (email, password) VALUES ('$email', '$pwd')";
-        } if ($conn->query($sql) === TRUE) {
+    if (($result->num_rows > 0) && ($email!= '') && ($pwd!= '')) {
+        $sql = "SELECT * FROM users WHERE password = '$pwd' AND email = '$email'";
+        $result = $conn->query($sql);
+
+        if (($result->num_rows > 0) && ($email!= '') && ($pwd!= '')) {
+            header("Location: login.php?email=". urlencode($email). "&password=". urlencode($pwd));
+            exit();
+        } else {
             header("Location: login.php");
+            exit();
+        }
+    } else {
+        if (($email!= '') && ($pwd!= '')) {
+            $sql = "INSERT INTO users (email, password) VALUES ('$email', '$pwd')";
+        }
+        if ($conn->query($sql) === TRUE) {
+            header("Location: login.php?email=". urlencode($email). "&password=". urlencode($pwd));
             exit();
         } else {
             exit();
