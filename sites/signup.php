@@ -27,7 +27,7 @@
             <button type="submit" id="submit-button">Register</button>
         </form>
         <section id="bottom">
-            <label id="redstar">*</label><label id="tos-text">Please be aware that GradeLens™ will store and collect the information that you put in. It will also process given data to store it quick and efficiently in our database. However we are currently not selling that data to advertisers</label>
+            <label id="redstar">*</label><label id="tos-text">Please be aware that GradeLens™ will store and collect the information that you put in. It will also process given data to store it quick and efficiently in our database. However we are currently not selling that data to advertisers.</label>
         </section>
     </section>
 
