@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="../style/signup.css">
+    <link rel="stylesheet" href="../style/login.css">
 </head>
 <body id="body" background="../source/signup_white_background.webp">
     <section id="signup-container">
@@ -43,22 +43,21 @@ if ($conn->connect_error) {
     die("Connection failed: ". $conn->connect_error);
 }
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") { // Check if the form was submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email-input"];
-    $password = $_POST["password-input"];
+    $pwd = $_POST["password-input"];
 
-    $sql = "SELECT * FROM users WHERE email = '$email'";
+    $sql = "SELECT * FROM users WHERE password = '$pwd' AND email = '$email'";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
         header("Location: overview.php");
     } else {
-        $sql = "INSERT INTO users (email, password) VALUES ('$email', '$password')";
-
         if ($conn->query($sql) === TRUE) {
+            header("Location: login.php");
             exit();
         } else {
-            echo "Error: ". $sql. "<br>". $conn->error;
+            exit();
         }
     }
 }
