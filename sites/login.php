@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signup</title>
+    <title>Logine>
     <link rel="stylesheet" href="../style/signup.css">
 </head>
 <body id="body" background="../source/signup_white_background.webp">
     <section id="signup-container">
         <div id="top">
-            <h1 id="signup-text">SIGNUP</h1>
+            <h1 id="signup-text">LOGIN</h1>
             <a id="logo" href="../index.html"><img src="../source/GradeLens_LOGO_transparent-black-var2.webp" alt="Logo" width="50px" height="50px"></a>
         </div>
         <div id="top-seperator"></div>
@@ -51,14 +51,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { // Check if the form was submitted
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
-        // Email already exists, display an error message or redirect to login
-        header("Location: login.php");
+        header("Location: overview.php");
     } else {
         $sql = "INSERT INTO users (email, password) VALUES ('$email', '$password')";
 
         if ($conn->query($sql) === TRUE) {
-            // Signup successful, redirect to a welcome page or login
-            header("Location: login.php"); // Replace 'welcome.php' with the actual page
             exit();
         } else {
             echo "Error: ". $sql. "<br>". $conn->error;
