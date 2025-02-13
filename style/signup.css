@@ -1,7 +1,7 @@
 #body {
     height: auto;
     width: auto;
-    background-color: white;
+    background-color: #e5e9ec;
     color: black;
 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -13,8 +13,8 @@
 #signup-container {
     margin-top: auto;
     margin-bottom: auto;
-    margin-left: auto;
     margin-right: auto;
+    margin-left: auto;
 
     padding-top: 1vh;
     padding-bottom: 1vh;
@@ -31,8 +31,10 @@
 
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
 
     box-shadow: #fefefe 5px 5px 5px;
+
 }
 
 #top {
@@ -88,8 +90,8 @@
 }
 
 #infotext {
-    color: black;
-    margin-top: -0.25vh;
+    color: #687172;
+    margin-top: 0.25vh;
     font-size: smaller;
 
     align-self: center;
@@ -112,14 +114,61 @@
     transition: transform 0.2s ease, background-color 0.5s linear;
     &:focus {
         background-color: white;
-        color: black;
+        color: #444444;
         transform: scale(1.01);
         outline: none;
     }
     &:hover {
-        background-color: white;
         color: black;
+        transform: scale(1.01);
+        outline: solid 1px #444444;
+    }
+}
+
+#password-input {
+    background-color: #dedede;
+    color: black;
+    margin-top: 0.25vh;
+
+    border: none;
+    border-radius: 1vw;
+
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    padding-left: 1vw;
+    padding-right: 1vw;
+
+    transition: transform 0.2s ease, background-color 0.5s linear;
+    &:focus {
+        background-color: white;
+        color: #687172;
         transform: scale(1.01);
         outline: none;
     }
+    &:hover {
+        color: black;
+        transform: scale(1.01);
+        outline: solid 1px #687172;
+    }
+}
+
+#bottom {
+    margin-top: 1vh;
+
+    color: #687172;
+    font-size: small;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+#redstar {
+    color: red;
+    font-size: small;
+}
+
+#tos-text {
+    align-self: center;
+    justify-self: center;
 }
