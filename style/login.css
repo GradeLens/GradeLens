@@ -54,12 +54,15 @@
     margin-left: auto;
 
     transition: transform 0.35s ease, rotate 1s ease;
+
     &:hover {
         transform: scale(1.1) rotate(120deg);
     }
+
     &:active {
         transform: scale(0.99) rotate(240deg);
     }
+
     backface-visibility: hidden;
 }
 
@@ -112,12 +115,14 @@
     padding-right: 1vw;
 
     transition: transform 0.2s ease, background-color 0.5s linear;
+
     &:focus {
         background-color: white;
         color: #444444;
         transform: scale(1.01);
         outline: none;
     }
+
     &:hover {
         color: black;
         transform: scale(1.01);
@@ -139,12 +144,14 @@
     padding-right: 1vw;
 
     transition: transform 0.2s ease, background-color 0.5s linear;
+
     &:focus {
         background-color: white;
         color: #687172;
         transform: scale(1.01);
         outline: none;
     }
+
     &:hover {
         color: black;
         transform: scale(1.01);
@@ -166,16 +173,19 @@
     padding-right: 1vw;
 
     transition: transform 0.2s ease, background-color 0.5s linear;
-    &:focus {   
+
+    &:focus {
         color: #687172;
         transform: scale(1.01);
         outline: none;
     }
+
     &:hover {
         color: black;
         transform: scale(1.01);
         outline: solid 1px #687172;
     }
+
     &:active {
         transform: scale(0.99);
     }
