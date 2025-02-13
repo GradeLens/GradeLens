@@ -50,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "SELECT * FROM users WHERE password = '$pwd' AND email = '$email'";
     $result = $conn->query($sql);
 
-    if ($result->num_rows > 0) {
+    if (($result->num_rows > 0) && ($email != '') && ($pwd != '')) {
         header("Location: overview.php");
     } else {
         if ($conn->query($sql) === TRUE) {
