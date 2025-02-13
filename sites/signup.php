@@ -43,25 +43,23 @@ if ($conn->connect_error) {
     die("Connection failed: ". $conn->connect_error);
 }
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") { // Check if the form was submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email-input"];
-    $password = $_POST["password-input"];
+    $pwd = $_POST["password-input"];
 
     $sql = "SELECT * FROM users WHERE email = '$email'";
     $result = $conn->query($sql);
 
-    if ($result->num_rows > 0) {
-        // Email already exists, display an error message or redirect to login
+    if (($result->num_rows > 0) && ($email != '') && ($pwd != '')) {
         header("Location: login.php");
     } else {
-        $sql = "INSERT INTO users (email, password) VALUES ('$email', '$password')";
-
-        if ($conn->query($sql) === TRUE) {
-            // Signup successful, redirect to a welcome page or login
-            header("Location: login.php"); // Replace 'welcome.php' with the actual page
+        if (($email != '') && ($pwd != '')) {
+        $sql = "INSERT INTO users (email, password) VALUES ('$email', '$pwd')";
+        } if ($conn->query($sql) === TRUE) {
+            header("Location: login.php");
             exit();
         } else {
-            echo "Error: ". $sql. "<br>". $conn->error;
+            exit();
         }
     }
 }
