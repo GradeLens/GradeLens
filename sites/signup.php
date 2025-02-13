@@ -6,7 +6,7 @@
     <title>Signup</title>
     <link rel="stylesheet" href="../style/signup.css">
 </head>
-<body id="body">
+<body id="body" background="../source/signup_white_background.webp">
     <section id="signup-container">
         <div id="top">
             <h1 id="signup-text">Signup</h1>
