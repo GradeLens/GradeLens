@@ -127,7 +127,7 @@
     &:hover {
         color: black;
         transform: scale(1.01);
-        outline: solid 1px #444444;
+        outline: solid 1px #999999;
     }
 }
 
@@ -154,12 +154,12 @@
     &:hover {
         color: black;
         transform: scale(1.01);
-        outline: solid 1px #687172;
+        outline: solid 1px #999999;
     }
 }
 
 #submit-button {
-    background-color: #dedede;
+    background-color: #cccccc;
     color: black;
     margin-top: 1vh;
 
