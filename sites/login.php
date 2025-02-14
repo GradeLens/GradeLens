@@ -1,3 +1,9 @@
+<?php
+if (isset($_GET["email"]) && isset($_GET["password"])) {
+    $email = $_GET["email"];
+    $password = $_GET["password"];
+}?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,14 +23,14 @@
         <p id="infotext">To use GradeLens™ and all it functions properly you have to sign up or log in.</p>
         <form id="credentials-container" method="post" action="">
             <label for="email-input">Email</label>
-            <input type="email" id="email-input" name="email-input">
+            <input type="email" id="email-input" name="email-input" <?php if (isset($email)) echo "value=\"$email\"";?>>
 
             <label for="password-input">Password</label>
-            <input type="password" id="password-input" name="password-input">
+            <input type="password" id="password-input" name="password-input" <?php if (isset($password)) echo "value=\"$password\"";?>>
 
             <div id="top-seperator"></div>
 
-            <button type="submit" id="submit-button">Submit</button>
+            <button type="submit" id="submit-button">Login</button>
         </form>
         <section id="bottom">
             <label id="redstar">*</label><label id="tos-text">Please be aware that GradeLens™ will store and collect the information that you put in. It will also process given data to store it quick and efficiently in our database. However we are currently not selling that data to advertisers</label>
@@ -32,36 +38,37 @@
     </section>
 
     <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "gradelens";
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "gradelens";
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+    $conn = new mysqli($servername, $username, $password, $dbname);
 
-if ($conn->connect_error) {
-    die("Connection failed: ". $conn->connect_error);
-}
+    if ($conn->connect_error) {
+        die("Connection failed: ". $conn->connect_error);
+    }
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $email = $_POST["email-input"];
-    $pwd = $_POST["password-input"];
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $email = $_POST["email-input"];
+        $pwd = $_POST["password-input"];
 
-    $sql = "SELECT * FROM users WHERE password = '$pwd' AND email = '$email'";
-    $result = $conn->query($sql);
+        $sql = "SELECT * FROM users WHERE password = '$pwd' AND email = '$email'";
+        $result = $conn->query($sql);
 
-    if (($result->num_rows > 0) && ($email != '') && ($pwd != '')) {
-        header("Location: overview.php");
-    } else {
-        if ($conn->query($sql) === TRUE) {
-            header("Location: login.php");
-            exit();
+        if (($result->num_rows > 0) && ($email!= '') && ($pwd!= '')) {
+            header("Location: overview.php");
         } else {
-            exit();
+            if ($conn->query($sql) === TRUE) {
+                header("Location: login.php");
+                exit();
+            } else {
+                exit();
+            }
         }
     }
-}
 
-$conn->close();?>
+    $conn->close();
+  ?>
 </body>
 </html>

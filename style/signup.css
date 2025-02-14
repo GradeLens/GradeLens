@@ -181,6 +181,7 @@
         color: black;
         transform: scale(1.01);
         outline: solid 1px #687172;
+        background-color: #bbbbbb;
     }
     &:active {
         transform: scale(0.99);
