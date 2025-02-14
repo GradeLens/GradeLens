@@ -11,20 +11,26 @@ body {
 
 #spinning-logo {
   margin-top: 10%;
-  animation: rotate 3s linear infinite;
+  animation: rotate 6.5s linear infinite;
+  backface-visibility: hidden;
 }
 
 @keyframes rotate {
-  100% { transform: rotate(360deg); }
+  100% { transform: rotate(360deg); backface-visibility: hidden; }
 }
 
 #error {
-  color: black;
+  color: #444444;
   font-size: xx-large;
   transform: scale(2);
 }
 
 #text {
-  color: black;
+  color: #666666;
+  margin-top: -1vh;
+}
+
+#subtext {
+  color: #888888;
   margin-top: -1vh;
 }

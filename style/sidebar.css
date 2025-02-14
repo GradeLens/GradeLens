@@ -1,0 +1,12 @@
+#sidebar-body {
+    background-color: green;
+    color: red;
+
+    position: sticky;
+    left: 0;
+
+    width: 10vw;
+    height: 25vh;
+
+    display: flex;
+}
