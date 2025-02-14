@@ -1,0 +1,30 @@
+body {
+  width: 98%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#spinning-logo {
+  margin-top: 10%;
+  animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+  100% { transform: rotate(360deg); }
+}
+
+#error {
+  color: black;
+  font-size: xx-large;
+  transform: scale(2);
+}
+
+#text {
+  color: black;
+  margin-top: -1vh;
+}
