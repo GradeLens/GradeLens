@@ -242,7 +242,8 @@
     padding-left: 1vw;
     padding-right: 1vw;
 
-    margin-left: -0.25vw;
+    margin-right: -0.5vw;
+    margin-left: -1vw;
 
     display: flex;
 
@@ -273,4 +274,20 @@
         cursor: pointer;
     }
     backface-visibility: hidden;
+}
+
+#indicator {
+    background: black;
+
+    display: flex;
+    position: absolute;
+
+    border: none;
+    border-radius: 10vw;
+
+    height: 0.5vh;
+    width: 1vw;
+
+    margin-top: 8vh;
+    margin-left: 8.75vw;
 }
