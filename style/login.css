@@ -134,6 +134,7 @@
         transform: scale(1.01);
         outline: solid 1px #999999;
     }
+    backface-visibility: hidden;
 }
 
 #password-input {
@@ -163,6 +164,7 @@
         transform: scale(1.01);
         outline: solid 1px #999999;
     }
+    backface-visibility: hidden;
 }
 
 #submit-button {
@@ -195,6 +197,7 @@
     &:active {
         transform: scale(0.99);
     }
+    backface-visibility: hidden;
 }
 
 #bottom {
@@ -216,4 +219,51 @@
 #tos-text {
     align-self: center;
     justify-self: center;
+}
+
+#registration-button{
+    background-color: none;
+    color: blue;
+
+    height: fit-content;
+
+    border: none;
+    border-radius: 1vw;
+
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    padding-left: 1vw;
+    padding-right: 1vw;
+
+    margin-left: -0.25vw;
+
+    display: flex;
+
+    align-items: center;
+    justify-items: center;
+
+    justify-self: center;
+    align-self: center;
+
+    transition: transform 0.2s ease, background-color 0.5s linear;
+
+    &:focus {
+        color: blue;
+        transform: scale(1.1);
+        outline: none;
+        cursor: pointer;
+    }
+
+    &:hover {
+        color: blue;
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+
+    &:active {
+        color: blue;
+        transform: scale(0.99);
+        cursor: pointer;
+    }
+    backface-visibility: hidden;
 }
