@@ -16,7 +16,8 @@ if (isset($_GET["email"]) && isset($_GET["password"])) {
     <section id="signup-container">
         <div id="top">
             <h1 id="signup-text">LOGIN /</h1><h1 type="button" id="registration-button" onclick="window.location.href='./signup.php'">SIGNUP</h1>
-            <a id="logo" href="../index.html"><img src="../source/GradeLens_LOGO_transparent-black-var2.webp" alt="Logo" width="50px" height="50px"></a>
+            <div id="indicator"></div>
+            <a id="logo"><img src="../source/GradeLens_LOGO_transparent-black-var2.webp" alt="Logo" width="50px" height="50px"></a>
         </div>
         <div id="top-seperator"></div>
 
@@ -52,19 +53,21 @@ if (isset($_GET["email"]) && isset($_GET["password"])) {
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $email = $_POST["email-input"];
         $pwd = $_POST["password-input"];
-
-        $sql = "SELECT * FROM users WHERE password = '$pwd' AND email = '$email'";
+    
+        $sql = "SELECT * FROM users WHERE email = '$email'";
         $result = $conn->query($sql);
-
-        if (($result->num_rows > 0) && ($email!= '') && ($pwd!= '')) {
-            header("Location: overview.php");
-        } else {
-            if ($conn->query($sql) === TRUE) {
-                header("Location: login.php");
-                exit();
+    
+        if ($result->num_rows > 0) {
+            $row = $result->fetch_assoc();
+            $hashed_password_from_database = $row['password'];
+    
+            if (password_verify($pwd, $hashed_password_from_database)) {
+                header("Location: overview.php");
             } else {
-                exit();
+                
             }
+        } else {
+            
         }
     }
 
