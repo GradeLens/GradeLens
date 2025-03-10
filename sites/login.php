@@ -15,7 +15,7 @@ if (isset($_GET["email"]) && isset($_GET["password"])) {
 <body id="body" background="../source/signup_white_background.webp">
     <section id="signup-container">
         <div id="top">
-            <h1 id="signup-text">LOGIN</h1>
+            <h1 id="signup-text">LOGIN /</h1><h1 type="button" id="registration-button" onclick="window.location.href='./signup.php'">SIGNUP</h1>
             <a id="logo" href="../index.html"><img src="../source/GradeLens_LOGO_transparent-black-var2.webp" alt="Logo" width="50px" height="50px"></a>
         </div>
         <div id="top-seperator"></div>

@@ -9,7 +9,7 @@
 <body id="body" background="../source/signup_white_background.webp">
     <section id="signup-container">
         <div id="top">
-            <h1 id="signup-text">SIGNUP</h1>
+            <h1 id="signup-text">SIGNUP /</h1><h1 type="button" id="login-button" onclick="window.location.href='./login.php'">LOGIN</h1>
             <a id="logo" href="../index.html"><img src="../source/GradeLens_LOGO_transparent-black-var2.webp" alt="Logo" width="50px" height="50px"></a>
         </div>
         <div id="top-seperator"></div>
@@ -24,7 +24,7 @@
 
             <div id="top-seperator"></div>
 
-            <button type="submit" id="submit-button">Register</button>
+            <button type="submit" id="submit-button">Create account</button>
         </form>
         <section id="bottom">
             <label id="redstar">*</label><label id="tos-text">Please be aware that GradeLens™ will store and collect the information that you put in. It will also process given data to store it quick and efficiently in our database. However we are currently not selling that data to advertisers.</label>
@@ -40,7 +40,7 @@ $dbname = "gradelens";
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 if ($conn->connect_error) {
-    die("Connection failed: ". $conn->connect_error);
+    die("Connection failed: " . $conn->connect_error);
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -50,23 +50,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "SELECT * FROM users WHERE email = '$email'";
     $result = $conn->query($sql);
 
-    if (($result->num_rows > 0) && ($email!= '') && ($pwd!= '')) {
-        $sql = "SELECT * FROM users WHERE password = '$pwd' AND email = '$email'";
-        $result = $conn->query($sql);
-
-        if (($result->num_rows > 0) && ($email!= '') && ($pwd!= '')) {
-            header("Location: login.php?email=". urlencode($email). "&password=". urlencode($pwd));
-            exit();
-        } else {
-            header("Location: login.php");
-            exit();
-        }
+    if (($result->num_rows > 0) && ($email != '') && ($pwd != '')) {
+        // E-Mail-Adresse existiert bereits, Nachricht anzeigen und weiterleiten
+        echo "<div id='message'>Diese E-Mail-Adresse ist bereits registriert.<br>Du wirst nun weiter geleitet.</div>";
+        echo "<meta http-equiv='refresh' content='3;url=login.php'>";
+        exit();
     } else {
-        if (($email!= '') && ($pwd!= '')) {
+        // E-Mail-Adresse ist noch nicht vorhanden, Benutzer registrieren
+        if (($email != '') && ($pwd != '')) {
             $sql = "INSERT INTO users (email, password) VALUES ('$email', '$pwd')";
         }
         if ($conn->query($sql) === TRUE) {
-            header("Location: login.php?email=". urlencode($email). "&password=". urlencode($pwd));
+            header("Location: login.php?email=" . urlencode($email) . "&password=" . urlencode($pwd));
             exit();
         } else {
             exit();
@@ -74,6 +69,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
-$conn->close();?>
+$conn->close();
+?>
 </body>
 </html>

@@ -208,3 +208,69 @@
     align-self: center;
     justify-self: center;
 }
+
+#message {
+    background-color: red;
+    color: black;
+
+    border-radius: 1vh;
+
+    justify-content: center;
+    align-content: center;
+
+    position: fixed;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+
+    height: 15vh;
+    width: 35vw;
+}
+
+#login-button{
+    background-color: none;
+    color: blue;
+
+    height: fit-content;
+
+    border: none;
+    border-radius: 1vw;
+
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    padding-left: 1vw;
+    padding-right: 1vw;
+
+    margin-left: -0.25vw;
+
+    display: flex;
+
+    align-items: center;
+    justify-items: center;
+
+    justify-self: center;
+    align-self: center;
+
+    transition: transform 0.2s ease, background-color 0.5s linear;
+
+    &:focus {
+        color: blue;
+        transform: scale(1.1);
+        outline: none;
+        cursor: pointer;
+    }
+
+    &:hover {
+        color: blue;
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+
+    &:active {
+        color: blue;
+        transform: scale(0.99);
+        cursor: pointer;
+    }
+    backface-visibility: hidden;
+}
