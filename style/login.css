@@ -205,6 +205,7 @@
 
     color: #687172;
     font-size: small;
+
     align-items: center;
     justify-items: center;
     align-content: center;
@@ -212,13 +213,20 @@
 }
 
 #redstar {
+    position: relative;
+    display: flex;
+
     color: red;
     font-size: small;
+
+    
 }
 
 #tos-text {
-    align-self: center;
-    justify-self: center;
+    position: relative;
+    display: flex;
+
+    color: #687172;
 }
 
 #registration-button{
