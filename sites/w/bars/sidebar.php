@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <link rel="stylesheet" href="../style/w/index.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="0; URL=./sites/w/login.php">
-    <title>GradeLens</title>
+    <title>Sidebar</title>
 </head>
+<body id="sidebar-body">
+    <section id="sidebar">
+        <h1>Test</h1>
+    </section>
+</body>
 </html>

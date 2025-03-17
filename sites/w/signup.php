@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup</title>
-    <link rel="stylesheet" href="../style/signup.css">
+    <link rel="stylesheet" href="../../style/w/signup.css">
 </head>
 <body id="body" background="../source/signup_white_background.webp">
     <section id="signup-container">
         <div id="top">
             <h1 type="button" id="login-button" onclick="window.location.href='./login.php'">LOGIN</h1><h1 id="signup-text">/ SIGNUP</h1>
             <div id="indicator"></div>
-            <a id="logo"><img src="../source/GradeLens_LOGO_transparent-black-var2.webp" alt="Logo" width="50px" height="50px"></a>
+            <a id="logo"><img src="../../source/GradeLens_LOGO_transparent-black-var2.webp" alt="Logo" width="50px" height="50px"></a>
         </div>
         <div id="top-seperator"></div>
 
@@ -28,7 +28,7 @@
             <button type="submit" id="submit-button">Create account</button>
         </form>
         <section id="bottom">
-            <label id="redstar">*</label><label id="tos-text">Please be aware that GradeLens™ will store and collect the information that you put in. It will also process given data to store it quick and efficiently in our database. However we are currently not selling that data to advertisers.</label>
+            <label id="tos-text">Please be aware that GradeLens™ will store and collect the information that you put in. It will also process given data to store it quick and efficiently in our database. However we are currently not selling that data to advertisers.</label>
         </section>
     </section>
     
