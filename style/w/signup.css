@@ -242,7 +242,7 @@
     padding-left: 1vw;
     padding-right: 1vw;
 
-    margin-right: -0.5vw;
+    margin-right: -0.65vw;
     margin-left: -1vw;
 
     display: flex;
@@ -288,6 +288,6 @@
     height: 0.5vh;
     width: 1vw;
 
-    margin-top: 8vh;
-    margin-left: 8.75vw;
+    margin-top: 7vh;
+    margin-left: 6.75vw;
 }

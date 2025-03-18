@@ -11,7 +11,7 @@
         <div id="top">
             <h1 type="button" id="login-button" onclick="window.location.href='./login.php'">LOGIN</h1><h1 id="signup-text">/ SIGNUP</h1>
             <div id="indicator"></div>
-            <a id="logo"><img src="../../source/GradeLens_LOGO_transparent-black-var2.webp" alt="Logo" width="50px" height="50px"></a>
+            <a href="../d/signup.php" id="logo"><img src="../../source/GradeLens_LOGO_transparent-black-var2.webp" alt="Logo" width="50px" height="50px"></a>
         </div>
         <div id="top-seperator"></div>
 

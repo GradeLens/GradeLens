@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup</title>
-    <link rel="stylesheet" href="../../style/signup.css">
+    <link rel="stylesheet" href="../../style/d/signup.css">
 </head>
-<body id="body" background="../../source/signup_dark_background.webp">
+<body id="body" background="../../source/signup_black_background.webp">
     <section id="signup-container">
         <div id="top">
             <h1 type="button" id="login-button" onclick="window.location.href='./login.php'">LOGIN</h1><h1 id="signup-text">/ SIGNUP</h1>
             <div id="indicator"></div>
-            <a id="logo"><img src="../../source/GradeLens_LOGO_transparent-white-var2.webp" alt="Logo" width="50px" height="50px"></a>
+            <a href="../w/signup.php" id="logo"><img src="../../source/GradeLens_LOGO_transparent-white-var2.webp" alt="Logo" width="50px" height="50px"></a>
         </div>
         <div id="top-seperator"></div>
 
