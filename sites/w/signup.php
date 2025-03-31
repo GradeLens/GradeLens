@@ -6,7 +6,7 @@
     <title>Signup</title>
     <link rel="stylesheet" href="../../style/w/signup.css">
 </head>
-<body id="body" background="../source/signup_white_background.webp">
+<body id="body" background="../../source/signup_white_background.webp">
     <section id="signup-container">
         <div id="top">
             <h1 type="button" id="login-button" onclick="window.location.href='./login.php'">LOGIN</h1><h1 id="signup-text">/ SIGNUP</h1>
