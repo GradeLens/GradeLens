@@ -72,6 +72,6 @@ if (isset($_GET["email"]) && isset($_GET["password"])) {
     }
 
     $conn->close();
-  ?>
+?>
 </body>
 </html>
