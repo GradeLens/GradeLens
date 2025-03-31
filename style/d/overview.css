@@ -1,6 +1,59 @@
 #body {
     height: 100%;
     width: 100%;
-
+    background-color: white; /* Gesamte Seite weiß */
     overflow: hidden;
+    display: flex; /* Für das Layout mit Sidebar und Container */
+}
+
+#overview-container {
+    background-color: #222222;/* Container-Hintergrundfarbe */
+    color: white;
+    margin-left: auto; /* Breite der Sidebar */
+    margin-top: 0.25vh;
+    margin-right: 0.5vw;
+    margin-bottom: 0.25vh;
+    height: 97vh; /* 100% - 2vh (oben und unten) */
+    width: calc(100% - 210px); /* 100% - 200px (Sidebar) - 2px (links und rechts) */
+    box-sizing: border-box; /* Inkludiert Padding und Border in die Größenberechnung */
+    overflow-y: auto; /* Ermöglicht Scrollen im Container */
+
+    position: absolute;
+    right: 0;
+
+    border-radius: 1vw;
+    box-shadow: #323232 5px 5px 5px;
+
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
+
+#logo-topleft{
+    top: 0;
+    left: 0;
+    position: absolute;
+    
+    margin-top: 1vh;
+    margin-left: 0.5vw;
+
+    &:hover {
+        transform: scale(1.1) rotate(120deg);
+    }
+
+    &:active {
+        transform: scale(0.99) rotate(240deg);
+    }
+
+    backface-visibility: hidden;
+}
+
+#logo-label {
+    color: white;
+    top: 0;
+    left: 0;
+    position: absolute;
+    margin-left: 4vw;
+    margin-top: 3.5vh;
 }
