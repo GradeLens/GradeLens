@@ -1,9 +1,12 @@
 #body {
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vh;
     background-color: white; /* Gesamte Seite weiß */
     overflow: hidden;
     display: flex; /* Für das Layout mit Sidebar und Container */
+    flex-direction: column;
+
+    overflow: hidden;
 }
 
 #overview-container {
@@ -12,8 +15,9 @@
     margin-top: 0.25vh;
     margin-right: 0.5vw;
     margin-bottom: 0.25vh;
-    height: 97vh; /* 100% - 2vh (oben und unten) */
-    width: calc(100% - 210px); /* 100% - 200px (Sidebar) - 2px (links und rechts) */
+    min-height: 97vh;/* 100% - 2vh (oben und unten) */
+    max-height: 98vh;
+    width: calc(100vw - 15vw); /* 100% - 200px (Sidebar) - 2px (links und rechts) */
     box-sizing: border-box; /* Inkludiert Padding und Border in die Größenberechnung */
     overflow-y: auto; /* Ermöglicht Scrollen im Container */
 
@@ -21,12 +25,14 @@
     right: 0;
 
     border-radius: 1vw;
-    box-shadow: #dfdfdf 5px 5px 5px;
+    box-shadow: #dedede 5px 5px 5px;
 
     padding-left: 1vw;
     padding-right: 1vw;
     padding-top: 1vh;
     padding-bottom: 1vh;
+    
+    flex-grow: 1;
 }
 
 #logo-topleft{
