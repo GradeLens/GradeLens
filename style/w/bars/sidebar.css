@@ -74,6 +74,8 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
     align-items: center;
+    align-content: center;
+    justify-content: center;
     justify-items: center;
 
     margin-top: 2vh;
@@ -91,26 +93,28 @@
     padding-top: 1vh;
     padding-bottom: 1vh;
 
+    box-shadow: 3px 3px 3px #cbcbcb;
+
     transition: all ease 0.3s;
     &:hover {
         transform: scale(1.01);
         background-color: #dddddd;
+        cursor: pointer;
     }
     backface-visibility: hidden;    
 }
 
-#home-text{
-    display: flex;
-    position: relative;
-
+#home-icon{
+    align-self: center;
     margin-right: auto;
-    margin-left: 0.5vw;
 }
 
 #library-container{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
     align-items: center;
+    align-content: center;
+    justify-content: center;
     justify-items: center;
 
     margin-top: 2vh;
@@ -128,26 +132,28 @@
     padding-top: 1vh;
     padding-bottom: 1vh;
 
+    box-shadow: 3px 3px 3px #cbcbcb;
+
     transition: all ease 0.3s;
     &:hover {
         transform: scale(1.01);
         background-color: #dddddd;
+        cursor: pointer;
     }
-    backface-visibility: hidden;  
+    backface-visibility: hidden;    
 }
 
-#library-text{
-    display: flex;
-    position: relative;
-
+#library-icon{
+    align-self: center;
     margin-right: auto;
-    margin-left: 0.5vw;
 }
 
 #add-container{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
     align-items: center;
+    align-content: center;
+    justify-content: center;
     justify-items: center;
 
     margin-top: 2vh;
@@ -165,18 +171,34 @@
     padding-top: 1vh;
     padding-bottom: 1vh;
 
+    box-shadow: 3px 3px 3px #cbcbcb;
+
     transition: all ease 0.3s;
     &:hover {
         transform: scale(1.01);
         background-color: #dddddd;
+        cursor: pointer;
     }
-    backface-visibility: hidden;  
+    backface-visibility: hidden;    
+}
+
+#add-icon{
+    align-self: center;
+    margin-right: auto;
 }
 
 #add-text{
-    display: flex;
     position: relative;
+    margin-bottom: 2vh;
+}
 
-    margin-right: auto;
-    margin-left: 0.5vw;
+#add-link{
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    justify-content: center;
+
+    background-color: none;
+    height: 100%;
+    width: 100%;
 }
